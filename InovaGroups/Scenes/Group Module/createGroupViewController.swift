@@ -29,7 +29,8 @@ class createGroupViewController: UIViewController {
             hideNavigationBar()
         }
     
-    @IBAction func create(_ sender: Any) {
+    @IBAction func create(_ sender: Any){
+        
         let name = tfGroupName.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         let theme = tfGroupTheme.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
@@ -37,13 +38,16 @@ class createGroupViewController: UIViewController {
         let owner = Auth.auth().currentUser?.uid
         
         let studentArray = [owner, "", "", "", "", "", "", "", "", "", ""]
+        let identifier = UUID().uuidString
         
-        db.collection("groups").addDocument(data:
-            ["groupName": name,
-             "groupTheme": theme,
-             "owner": owner ?? 0,
-             "status": "ABERTO",
-             "studentArray" : studentArray])
+        db.collection("groups").document(identifier).setData(["groupName": name,
+        "groupTheme": theme,
+        "owner": owner ?? 0,
+        "status": "ABERTO",
+        "studentArray" : studentArray])
+        
+        db.collection("users").document(owner!).updateData([
+            "group": identifier])
         
         performSegue(withIdentifier: "goToGroup", sender: nil)
         

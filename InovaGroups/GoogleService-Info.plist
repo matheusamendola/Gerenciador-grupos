@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>549687887528-rnihb0nvj9ddcgdv2cnetqfjr70dp3jp.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.549687887528-rnihb0nvj9ddcgdv2cnetqfjr70dp3jp</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCiY3wR9Wgpz2ZCNPtGI9pl_PlClEC8F4o</string>
+	<key>GCM_SENDER_ID</key>
+	<string>549687887528</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.matheusamendola.InovaGroups</string>
+	<key>PROJECT_ID</key>
+	<string>inova-groups</string>
+	<key>STORAGE_BUCKET</key>
+	<string>inova-groups.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:549687887528:ios:74ca589b5ceb2e590a249d</string>
+	<key>DATABASE_URL</key>
+	<string>https://inova-groups.firebaseio.com</string>
+</dict>
+</plist>

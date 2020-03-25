@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		09D333113EC047997B79B5CB /* libPods-InovaGroups.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F75279209D0B876C0DC8C05 /* libPods-InovaGroups.a */; };
+		E0422510242BC6DE00EDC97F /* cursos.json in Resources */ = {isa = PBXBuildFile; fileRef = E042250F242BC6DE00EDC97F /* cursos.json */; };
+		E0422513242BCBE400EDC97F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0422512242BCBE300EDC97F /* GoogleService-Info.plist */; };
 		E05817232429747900FC308C /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05817222429747900FC308C /* user.swift */; };
 		E06F59F2242427BD00D9F780 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06F59F1242427BD00D9F780 /* AppDelegate.swift */; };
 		E06F59F4242427BD00D9F780 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06F59F3242427BD00D9F780 /* SceneDelegate.swift */; };
@@ -24,7 +26,6 @@
 		E0CA081424266F9200BAAEB5 /* registerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CA081324266F9200BAAEB5 /* registerViewController.swift */; };
 		E0CA081E24269DEA00BAAEB5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CA081D24269DEA00BAAEB5 /* ViewController.swift */; };
 		E0CA08202426A79200BAAEB5 /* CoursePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CA081F2426A79200BAAEB5 /* CoursePickerViewController.swift */; };
-		E0DEDD672428FE2600E7D060 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0DEDD662428FE2600E7D060 /* GoogleService-Info.plist */; };
 		E0E929C424293B6D00E916A4 /* homeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E929C324293B6D00E916A4 /* homeViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,8 @@
 		3F75279209D0B876C0DC8C05 /* libPods-InovaGroups.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-InovaGroups.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		69476E9069E52E488E4FE7EF /* Pods-InovaGroups.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InovaGroups.debug.xcconfig"; path = "Target Support Files/Pods-InovaGroups/Pods-InovaGroups.debug.xcconfig"; sourceTree = "<group>"; };
 		B6F56F05BF00C713CEDC7693 /* Pods-InovaGroups.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InovaGroups.release.xcconfig"; path = "Target Support Files/Pods-InovaGroups/Pods-InovaGroups.release.xcconfig"; sourceTree = "<group>"; };
+		E042250F242BC6DE00EDC97F /* cursos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cursos.json; sourceTree = "<group>"; };
+		E0422512242BCBE300EDC97F /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "InovaGroups/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		E05817222429747900FC308C /* user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
 		E06F59EE242427BD00D9F780 /* InovaGroups.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InovaGroups.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E06F59F1242427BD00D9F780 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,7 +53,6 @@
 		E0CA081324266F9200BAAEB5 /* registerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerViewController.swift; sourceTree = "<group>"; };
 		E0CA081D24269DEA00BAAEB5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E0CA081F2426A79200BAAEB5 /* CoursePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursePickerViewController.swift; sourceTree = "<group>"; };
-		E0DEDD662428FE2600E7D060 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E0E929C324293B6D00E916A4 /* homeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +123,14 @@
 			path = "Group Module";
 			sourceTree = "<group>";
 		};
+		E0422511242BC6E600EDC97F /* Archives */ = {
+			isa = PBXGroup;
+			children = (
+				E042250F242BC6DE00EDC97F /* cursos.json */,
+			);
+			path = Archives;
+			sourceTree = "<group>";
+		};
 		E06F59E5242427BD00D9F780 = {
 			isa = PBXGroup;
 			children = (
@@ -142,11 +152,12 @@
 		E06F59F0242427BD00D9F780 /* InovaGroups */ = {
 			isa = PBXGroup;
 			children = (
+				E0422511242BC6E600EDC97F /* Archives */,
 				E0ACB8392427E28300D122A3 /* Configs */,
 				E0ACB8382427E24C00D122A3 /* Scenes */,
 				E06F59F7242427BD00D9F780 /* Main.storyboard */,
+				E0422512242BCBE300EDC97F /* GoogleService-Info.plist */,
 				E06F59FC242427C300D9F780 /* LaunchScreen.storyboard */,
-				E0DEDD662428FE2600E7D060 /* GoogleService-Info.plist */,
 				E06F59FF242427C300D9F780 /* Info.plist */,
 			);
 			path = InovaGroups;
@@ -236,8 +247,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E06F59FE242427C300D9F780 /* LaunchScreen.storyboard in Resources */,
-				E0DEDD672428FE2600E7D060 /* GoogleService-Info.plist in Resources */,
 				E06F59FB242427C300D9F780 /* Assets.xcassets in Resources */,
+				E0422513242BCBE400EDC97F /* GoogleService-Info.plist in Resources */,
+				E0422510242BC6DE00EDC97F /* cursos.json in Resources */,
 				E06F59F9242427BD00D9F780 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

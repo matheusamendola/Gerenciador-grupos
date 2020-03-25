@@ -25,6 +25,7 @@ class CoursePickerViewController: UIViewController, UIPickerViewDelegate, UIPick
     @IBOutlet weak var pkCourses: UIPickerView!
     
     var pickerData: [String] = [String]()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,7 @@ class CoursePickerViewController: UIViewController, UIPickerViewDelegate, UIPick
         
         pickerData = ["Administracao", "Arquitetura e Urbanismo", "Artes Cenicas", "Ciencia da Computacao", "Ciencias Contabeis", "Ciencias Economicas", "Design de Moda", "Design de Produto", "Direito", "Educacao Fisica", "Enfermagem", "Engenharia Civil", "Engenharia de Computacao", "Engenharia de Petroleo", "Engenharia de Producao", "Engenharia Eletrica", "Engenharia Mecanica", "Engenharia Quimica", "Estetica e Cosmetica", "Farmacia", "Fisioterapia", "Fonoaudiologia", "Fotografia", "Gastronomia", "Jornalismo", "Marketing", "Medicina", "Medicina Veterinaria", "Nutricao", "Odontologia", "Pedagogia", "Psicologia", "Publicidade e Propaganda", "Relacoes Internacionais", "Sistemas de Informacao"]
     }
+    
     
     @IBAction func cancel(_ sender: Any) {
         dismiss(animated: true, completion: nil)
