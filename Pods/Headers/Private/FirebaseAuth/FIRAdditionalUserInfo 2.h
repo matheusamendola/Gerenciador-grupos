@@ -1,0 +1,1 @@
+../../../FirebaseAuth/Firebase/Auth/Source/Public/FIRAdditionalUserInfo 2.h

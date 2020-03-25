@@ -1,0 +1,1 @@
+../../../FirebaseAuth/Firebase/Auth/Source/Public/FIROAuthCredential 2.h

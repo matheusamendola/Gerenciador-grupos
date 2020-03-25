@@ -1,0 +1,1 @@
+../../../FirebaseDatabase/Firebase/Database/Persistence/FTrackedQueryManager 2.h

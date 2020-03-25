@@ -1,0 +1,1 @@
+../../../FirebaseAuth/Firebase/Auth/Source/AuthProvider/FIRAuthCredential_Internal 2.h
