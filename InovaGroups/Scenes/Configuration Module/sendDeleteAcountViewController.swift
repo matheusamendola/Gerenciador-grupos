@@ -37,6 +37,7 @@ class sendDeleteAcountViewController: UIViewController {
                 
           }
         }
-        dismiss(animated: true, completion: nil)
+        performSegue(withIdentifier: "goToLoginAfterDelete", sender: nil)
+        
     }
 }

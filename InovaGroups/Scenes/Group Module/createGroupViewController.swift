@@ -47,9 +47,9 @@ class createGroupViewController: UIViewController {
         "studentArray" : studentArray])
         
         db.collection("users").document(owner!).updateData([
-            "group": identifier])
+            "group": identifier, "groupName": name, "cargo": "Lider", "grupoCriado": "1"])
         
-        performSegue(withIdentifier: "goToGroup", sender: nil)
+        navigationController?.popViewController(animated: true)
         
     }
     

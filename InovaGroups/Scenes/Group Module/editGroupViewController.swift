@@ -12,11 +12,8 @@ class editGroupViewController: UIViewController, UITableViewDelegate, UITableVie
     
     @IBOutlet weak var myTableView: UITableView!
     
-    
-
     var studentArray = ["Matheus", "vazio", "vazio", "vazio", "vazio", "vazio", "vazio", "vazio", "vazio", "vazio", "vazio"]
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         showNavigationBar()
@@ -29,7 +26,6 @@ class editGroupViewController: UIViewController, UITableViewDelegate, UITableVie
         myTableView.dataSource = self
         myTableView.delegate = self
 
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillDisappear(_ animated: Bool) {

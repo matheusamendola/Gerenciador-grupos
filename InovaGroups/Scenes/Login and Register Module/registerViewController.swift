@@ -14,14 +14,12 @@ class registerViewController: UIViewController {
     @IBOutlet weak var tfName: UITextField!
     @IBOutlet weak var tfMatricula: UITextField!
     @IBOutlet weak var tfEmail: UITextField!
-    
     @IBOutlet weak var tfPhone: UITextField!
     @IBOutlet weak var tfPassword: UITextField!
-    
-    @IBOutlet weak var tfCurso: UIButton!
-    
+    @IBOutlet weak var tfCurso: UITextField!
     
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         showNavigationBar()
@@ -33,6 +31,7 @@ class registerViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         hideNavigationBar()
+        
     }
     
     func validateField() -> String?{
@@ -40,7 +39,8 @@ class registerViewController: UIViewController {
             tfEmail.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             tfMatricula.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             tfPhone.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-            tfPassword.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""{
+            tfPassword.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            tfCurso.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""{
             
             return "Entre com todos os campos"
         }
@@ -62,7 +62,7 @@ class registerViewController: UIViewController {
             let matricula = tfMatricula.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let phone = tfPhone.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let password = tfPassword.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            let curso = tfCurso.titleLabel!.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let curso = tfCurso.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             
             Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
                 if err != nil {
@@ -72,7 +72,7 @@ class registerViewController: UIViewController {
                     let db = Firestore.firestore()
                     let owner = (Auth.auth().currentUser?.uid)!
                     
-                    db.collection("users").document(owner).setData(["curso": curso, "name":name, "matricula":matricula,"phone":phone,"uid":result!.user.uid,"group": "nil","cargo": "Aluno"]){ (error) in
+                    db.collection("users").document(owner).setData(["curso": curso, "name":name, "matricula":matricula,"phone":phone,"uid":result!.user.uid,"group": "nil","groupName": "Sem grupo","cargo": "Aluno","grupoCriado": "0"]){ (error) in
                         if error != nil {
                             print("Erro")
                         }

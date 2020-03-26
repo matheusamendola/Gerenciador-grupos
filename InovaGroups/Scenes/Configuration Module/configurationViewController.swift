@@ -34,14 +34,4 @@ class configurationViewController: UIViewController {
         hideNavigationBar()
     }
     
-    @IBAction func exit(_ sender: UIButton) {
-        let firebaseAuth = Auth.auth()
-        do {
-          try firebaseAuth.signOut()
-          performSegue(withIdentifier: "goToLogin", sender: nil)
-        } catch let signOutError as NSError {
-          print ("Error signing out: %@", signOutError)
-        }
-        
-    }
 }

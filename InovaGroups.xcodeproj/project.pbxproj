@@ -10,7 +10,7 @@
 		09D333113EC047997B79B5CB /* libPods-InovaGroups.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F75279209D0B876C0DC8C05 /* libPods-InovaGroups.a */; };
 		E0422510242BC6DE00EDC97F /* cursos.json in Resources */ = {isa = PBXBuildFile; fileRef = E042250F242BC6DE00EDC97F /* cursos.json */; };
 		E0422513242BCBE400EDC97F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0422512242BCBE300EDC97F /* GoogleService-Info.plist */; };
-		E05817232429747900FC308C /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05817222429747900FC308C /* user.swift */; };
+		E05EEB85242C29D6002C8BA1 /* sendExitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05EEB84242C29D6002C8BA1 /* sendExitViewController.swift */; };
 		E06F59F2242427BD00D9F780 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06F59F1242427BD00D9F780 /* AppDelegate.swift */; };
 		E06F59F4242427BD00D9F780 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06F59F3242427BD00D9F780 /* SceneDelegate.swift */; };
 		E06F59F6242427BD00D9F780 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06F59F5242427BD00D9F780 /* loginViewController.swift */; };
@@ -25,7 +25,6 @@
 		E0ACB83F242815E900D122A3 /* sendDeleteAcountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0ACB83E242815E900D122A3 /* sendDeleteAcountViewController.swift */; };
 		E0CA081424266F9200BAAEB5 /* registerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CA081324266F9200BAAEB5 /* registerViewController.swift */; };
 		E0CA081E24269DEA00BAAEB5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CA081D24269DEA00BAAEB5 /* ViewController.swift */; };
-		E0CA08202426A79200BAAEB5 /* CoursePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CA081F2426A79200BAAEB5 /* CoursePickerViewController.swift */; };
 		E0E929C424293B6D00E916A4 /* homeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E929C324293B6D00E916A4 /* homeViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,7 +34,7 @@
 		B6F56F05BF00C713CEDC7693 /* Pods-InovaGroups.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InovaGroups.release.xcconfig"; path = "Target Support Files/Pods-InovaGroups/Pods-InovaGroups.release.xcconfig"; sourceTree = "<group>"; };
 		E042250F242BC6DE00EDC97F /* cursos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cursos.json; sourceTree = "<group>"; };
 		E0422512242BCBE300EDC97F /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "InovaGroups/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
-		E05817222429747900FC308C /* user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
+		E05EEB84242C29D6002C8BA1 /* sendExitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sendExitViewController.swift; sourceTree = "<group>"; };
 		E06F59EE242427BD00D9F780 /* InovaGroups.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InovaGroups.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E06F59F1242427BD00D9F780 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E06F59F3242427BD00D9F780 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,7 +51,6 @@
 		E0ACB83E242815E900D122A3 /* sendDeleteAcountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sendDeleteAcountViewController.swift; sourceTree = "<group>"; };
 		E0CA081324266F9200BAAEB5 /* registerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerViewController.swift; sourceTree = "<group>"; };
 		E0CA081D24269DEA00BAAEB5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E0CA081F2426A79200BAAEB5 /* CoursePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursePickerViewController.swift; sourceTree = "<group>"; };
 		E0E929C324293B6D00E916A4 /* homeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,7 +88,6 @@
 			children = (
 				E06F59F5242427BD00D9F780 /* loginViewController.swift */,
 				E0CA081324266F9200BAAEB5 /* registerViewController.swift */,
-				E0CA081F2426A79200BAAEB5 /* CoursePickerViewController.swift */,
 			);
 			path = "Login and Register Module";
 			sourceTree = "<group>";
@@ -99,7 +96,8 @@
 			isa = PBXGroup;
 			children = (
 				E07589202426E43A0043DA04 /* configurationViewController.swift */,
-				E0ACB83C24280D9B00D122A3 /* sendGroupConfirmViewController.swift */,
+				E0ACB83E242815E900D122A3 /* sendDeleteAcountViewController.swift */,
+				E05EEB84242C29D6002C8BA1 /* sendExitViewController.swift */,
 			);
 			path = "Configuration Module";
 			sourceTree = "<group>";
@@ -118,7 +116,7 @@
 				E0ACB8302427923000D122A3 /* editGroupViewController.swift */,
 				E0ACB83A2427E2E500D122A3 /* createGroupViewController.swift */,
 				E0ACB8362427CDBE00D122A3 /* addPersonViewController.swift */,
-				E0ACB83E242815E900D122A3 /* sendDeleteAcountViewController.swift */,
+				E0ACB83C24280D9B00D122A3 /* sendGroupConfirmViewController.swift */,
 			);
 			path = "Group Module";
 			sourceTree = "<group>";
@@ -171,7 +169,6 @@
 				E042250C242BBDD500EDC97F /* Configuration Module */,
 				E042250D242BBE2F00EDC97F /* Home Module */,
 				E0CA081D24269DEA00BAAEB5 /* ViewController.swift */,
-				E05817222429747900FC308C /* user.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -303,16 +300,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0CA08202426A79200BAAEB5 /* CoursePickerViewController.swift in Sources */,
 				E0ACB83F242815E900D122A3 /* sendDeleteAcountViewController.swift in Sources */,
 				E06F59F6242427BD00D9F780 /* loginViewController.swift in Sources */,
 				E0E929C424293B6D00E916A4 /* homeViewController.swift in Sources */,
-				E05817232429747900FC308C /* user.swift in Sources */,
 				E0ACB8312427923000D122A3 /* editGroupViewController.swift in Sources */,
 				E06F59F2242427BD00D9F780 /* AppDelegate.swift in Sources */,
 				E0CA081E24269DEA00BAAEB5 /* ViewController.swift in Sources */,
 				E0ACB83D24280D9B00D122A3 /* sendGroupConfirmViewController.swift in Sources */,
 				E07589212426E43A0043DA04 /* configurationViewController.swift in Sources */,
+				E05EEB85242C29D6002C8BA1 /* sendExitViewController.swift in Sources */,
 				E06F59F4242427BD00D9F780 /* SceneDelegate.swift in Sources */,
 				E0ACB8372427CDBE00D122A3 /* addPersonViewController.swift in Sources */,
 				E0ACB83B2427E2E500D122A3 /* createGroupViewController.swift in Sources */,
