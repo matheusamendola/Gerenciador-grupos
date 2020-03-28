@@ -16,16 +16,19 @@ class editGroupViewController: UIViewController, UITableViewDelegate, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        showNavigationBar()
-        
-    self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController!.navigationBar.backItem!.title = "Voltar"
+        //showNavigationBar()
         
         myTableView.dataSource = self
         myTableView.delegate = self
 
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        showNavigationBar()
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController!.navigationBar.backItem!.title = "Voltar"
     }
     
     override func viewWillDisappear(_ animated: Bool) {

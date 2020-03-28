@@ -14,6 +14,9 @@ class loginViewController: UIViewController {
     @IBOutlet weak var tfEmail: UITextField!
     @IBOutlet weak var tfSenha: UITextField!
     
+    //Table View
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         hideNavigationBar()
@@ -28,7 +31,7 @@ class loginViewController: UIViewController {
                 print("Erro")
             }
             else {
-                self.performSegue(withIdentifier: "goHome", sender: nil)
+                self.performSegue(withIdentifier: "goHome", sender: sender)
             }
         }
         

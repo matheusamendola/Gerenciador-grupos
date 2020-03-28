@@ -22,9 +22,9 @@
 		E0ACB8372427CDBE00D122A3 /* addPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0ACB8362427CDBE00D122A3 /* addPersonViewController.swift */; };
 		E0ACB83B2427E2E500D122A3 /* createGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0ACB83A2427E2E500D122A3 /* createGroupViewController.swift */; };
 		E0ACB83D24280D9B00D122A3 /* sendGroupConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0ACB83C24280D9B00D122A3 /* sendGroupConfirmViewController.swift */; };
-		E0ACB83F242815E900D122A3 /* sendDeleteAcountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0ACB83E242815E900D122A3 /* sendDeleteAcountViewController.swift */; };
 		E0CA081424266F9200BAAEB5 /* registerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CA081324266F9200BAAEB5 /* registerViewController.swift */; };
 		E0CA081E24269DEA00BAAEB5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CA081D24269DEA00BAAEB5 /* ViewController.swift */; };
+		E0E77D66242FA12B00BADDF5 /* GroupsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E77D65242FA12B00BADDF5 /* GroupsTableViewCell.swift */; };
 		E0E929C424293B6D00E916A4 /* homeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E929C324293B6D00E916A4 /* homeViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,9 +48,9 @@
 		E0ACB8362427CDBE00D122A3 /* addPersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addPersonViewController.swift; sourceTree = "<group>"; };
 		E0ACB83A2427E2E500D122A3 /* createGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createGroupViewController.swift; sourceTree = "<group>"; };
 		E0ACB83C24280D9B00D122A3 /* sendGroupConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sendGroupConfirmViewController.swift; sourceTree = "<group>"; };
-		E0ACB83E242815E900D122A3 /* sendDeleteAcountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sendDeleteAcountViewController.swift; sourceTree = "<group>"; };
 		E0CA081324266F9200BAAEB5 /* registerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerViewController.swift; sourceTree = "<group>"; };
 		E0CA081D24269DEA00BAAEB5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E0E77D65242FA12B00BADDF5 /* GroupsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsTableViewCell.swift; sourceTree = "<group>"; };
 		E0E929C324293B6D00E916A4 /* homeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,7 +96,6 @@
 			isa = PBXGroup;
 			children = (
 				E07589202426E43A0043DA04 /* configurationViewController.swift */,
-				E0ACB83E242815E900D122A3 /* sendDeleteAcountViewController.swift */,
 				E05EEB84242C29D6002C8BA1 /* sendExitViewController.swift */,
 			);
 			path = "Configuration Module";
@@ -106,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				E0E929C324293B6D00E916A4 /* homeViewController.swift */,
+				E0E77D65242FA12B00BADDF5 /* GroupsTableViewCell.swift */,
 			);
 			path = "Home Module";
 			sourceTree = "<group>";
@@ -154,6 +154,7 @@
 				E0ACB8392427E28300D122A3 /* Configs */,
 				E0ACB8382427E24C00D122A3 /* Scenes */,
 				E06F59F7242427BD00D9F780 /* Main.storyboard */,
+				E0CA081D24269DEA00BAAEB5 /* ViewController.swift */,
 				E0422512242BCBE300EDC97F /* GoogleService-Info.plist */,
 				E06F59FC242427C300D9F780 /* LaunchScreen.storyboard */,
 				E06F59FF242427C300D9F780 /* Info.plist */,
@@ -168,7 +169,6 @@
 				E042250B242BBD8400EDC97F /* Login and Register Module */,
 				E042250C242BBDD500EDC97F /* Configuration Module */,
 				E042250D242BBE2F00EDC97F /* Home Module */,
-				E0CA081D24269DEA00BAAEB5 /* ViewController.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -300,7 +300,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0ACB83F242815E900D122A3 /* sendDeleteAcountViewController.swift in Sources */,
 				E06F59F6242427BD00D9F780 /* loginViewController.swift in Sources */,
 				E0E929C424293B6D00E916A4 /* homeViewController.swift in Sources */,
 				E0ACB8312427923000D122A3 /* editGroupViewController.swift in Sources */,
@@ -308,6 +307,7 @@
 				E0CA081E24269DEA00BAAEB5 /* ViewController.swift in Sources */,
 				E0ACB83D24280D9B00D122A3 /* sendGroupConfirmViewController.swift in Sources */,
 				E07589212426E43A0043DA04 /* configurationViewController.swift in Sources */,
+				E0E77D66242FA12B00BADDF5 /* GroupsTableViewCell.swift in Sources */,
 				E05EEB85242C29D6002C8BA1 /* sendExitViewController.swift in Sources */,
 				E06F59F4242427BD00D9F780 /* SceneDelegate.swift in Sources */,
 				E0ACB8372427CDBE00D122A3 /* addPersonViewController.swift in Sources */,
