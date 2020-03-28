@@ -23,6 +23,8 @@ class homeViewController: UIViewController, UITableViewDelegate, UITableViewData
     let USERS_REF = "users"
     
     var groupArray = [String]()
+    var groupIDArray = [String] ()
+    var grupoID: String = ""
     var nomeGrupo: String = ""
     
 
@@ -51,6 +53,7 @@ class homeViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewWillDisappear(_ animated: Bool) {
         hideNavigationBar()
         groupArray.removeAll()
+        groupIDArray.removeAll()
 
     }
     
@@ -65,12 +68,17 @@ class homeViewController: UIViewController, UITableViewDelegate, UITableViewData
                     self.myTableView.delegate = self
                     for document in querySnapshot!.documents {
                         let data = document.data()
+                        self.grupoID = document.documentID
+                        self.groupIDArray.append(self.grupoID)
+                        self.grupoID = ""
                         self.nomeGrupo = data["groupName"] as! String
                         self.groupArray.append(self.nomeGrupo)
                         self.nomeGrupo = ""
+                        
                     }
                     self.myTableView.reloadData()
                     print(self.groupArray)
+                    print(self.groupIDArray)
                     
                 }
         }
@@ -128,6 +136,14 @@ class homeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         cell.textLabel!.text = groupArray[indexPath.row]
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+           print("row: \(indexPath.row)")
+        //Pegar indice que foi clicado mandar -> groupIDArray do clicado
+        //Para a proxima tela
+        //performSegue(withIdentifier: "createGrupoSegue", sender: <id do grupo>)
+        
     }
     
     @IBAction func createOrEdit(_ sender: UIButton) {
