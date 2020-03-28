@@ -45,8 +45,6 @@ class homeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidAppear(_ animated: Bool) {
         myTableView.reloadData()
-        self.myTableView.dataSource = self
-        self.myTableView.delegate = self
     }
     
     
@@ -63,14 +61,17 @@ class homeViewController: UIViewController, UITableViewDelegate, UITableViewData
                 if let err = err {
                     print("Error getting documents: \(err)")
                 } else {
+                    self.myTableView.dataSource = self
+                    self.myTableView.delegate = self
                     for document in querySnapshot!.documents {
                         let data = document.data()
                         self.nomeGrupo = data["groupName"] as! String
                         self.groupArray.append(self.nomeGrupo)
                         self.nomeGrupo = ""
                     }
-                    //self.myTableView.dataSource = self
-                    //self.myTableView.delegate = self
+                    self.myTableView.reloadData()
+                    print(self.groupArray)
+                    
                 }
         }
     }
