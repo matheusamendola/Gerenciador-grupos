@@ -24,7 +24,4 @@ class ViewController: UINavigationController {
         view.endEditing(true)
     }
     
-
-
 }
-

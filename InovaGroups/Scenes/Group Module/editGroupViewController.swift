@@ -12,6 +12,7 @@ class editGroupViewController: UIViewController, UITableViewDelegate, UITableVie
     
     @IBOutlet weak var myTableView: UITableView!
     
+    
     var studentArray = ["Matheus", "vazio", "vazio", "vazio", "vazio", "vazio", "vazio", "vazio", "vazio", "vazio", "vazio"]
     
     override func viewDidLoad() {

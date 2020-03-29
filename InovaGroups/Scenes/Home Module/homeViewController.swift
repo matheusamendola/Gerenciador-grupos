@@ -19,7 +19,9 @@ class homeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var viLoading: UIView!
     @IBOutlet weak var aiLoading: UIActivityIndicatorView!
     
-    
+    var selectedGroup = ""
+    let teste: Int = 1
+
     
     @IBOutlet weak var myTableView: UITableView!
     
@@ -155,12 +157,20 @@ class homeViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "viewGroup" {
+                if let destination = segue.destination as? viewGroupViewController {
+                    destination.teste = selectedGroup
+                    
+                }
+            }
+    }
+    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
            print("row: \(indexPath.row)")
+        selectedGroup = groupIDArray[indexPath.row]
         performSegue(withIdentifier: "viewGroup", sender: nil)
-        //Pegar indice que foi clicado mandar -> groupIDArray do clicado
-        //Para a proxima tela
-        //performSegue(withIdentifier: "createGrupoSegue", sender: <id do grupo>)
         
     }
     
