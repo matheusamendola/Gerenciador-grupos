@@ -157,6 +157,7 @@ class homeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
            print("row: \(indexPath.row)")
+        performSegue(withIdentifier: "viewGroup", sender: nil)
         //Pegar indice que foi clicado mandar -> groupIDArray do clicado
         //Para a proxima tela
         //performSegue(withIdentifier: "createGrupoSegue", sender: <id do grupo>)
