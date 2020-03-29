@@ -16,6 +16,11 @@ class homeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var lbCargo: UILabel!
     @IBOutlet weak var btCreate: UIButton!
     
+    @IBOutlet weak var viLoading: UIView!
+    @IBOutlet weak var aiLoading: UIActivityIndicatorView!
+    
+    
+    
     @IBOutlet weak var myTableView: UITableView!
     
     
@@ -43,6 +48,7 @@ class homeViewController: UIViewController, UITableViewDelegate, UITableViewData
         getUserData()
         updateData()
         getGroupList()
+        self.load(show: true)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -57,6 +63,16 @@ class homeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     }
     
+    func load(show: Bool) {
+        viLoading.isHidden = !show
+        if show{
+            aiLoading.startAnimating()
+        }
+        else{
+            aiLoading.stopAnimating()
+        }
+    }
+    
     
     func getGroupList(){
         let db = Firestore.firestore()
@@ -64,6 +80,7 @@ class homeViewController: UIViewController, UITableViewDelegate, UITableViewData
                 if let err = err {
                     print("Error getting documents: \(err)")
                 } else {
+                    self.load(show: false)
                     self.myTableView.dataSource = self
                     self.myTableView.delegate = self
                     for document in querySnapshot!.documents {

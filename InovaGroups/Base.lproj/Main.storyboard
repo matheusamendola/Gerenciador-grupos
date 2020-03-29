@@ -672,6 +672,21 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view hidden="YES" contentMode="scaleToFill" id="Eff-Lr-mcP">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Q6P-S8-dAf">
+                                        <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                        <color key="color" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Q6P-S8-dAf" firstAttribute="centerX" secondItem="Eff-Lr-mcP" secondAttribute="centerX" id="T34-XZ-zg0"/>
+                                    <constraint firstItem="Q6P-S8-dAf" firstAttribute="centerY" secondItem="Eff-Lr-mcP" secondAttribute="centerY" id="u2J-au-9EV"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -691,11 +706,13 @@
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="ETQ-eZ-64y"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="aiLoading" destination="Q6P-S8-dAf" id="Og6-Rz-MDE"/>
                         <outlet property="btCreate" destination="0hU-GM-pY4" id="yd2-tA-w5n"/>
                         <outlet property="lbCargo" destination="sKA-L1-u6M" id="qnh-2M-6u1"/>
                         <outlet property="lbGroup" destination="Elv-D6-1F1" id="LjK-ow-2kK"/>
                         <outlet property="lbName" destination="7md-Ji-gCa" id="6hf-Uf-O0d"/>
                         <outlet property="myTableView" destination="PYz-Ja-mzU" id="0nM-xJ-J9I"/>
+                        <outlet property="viLoading" destination="Eff-Lr-mcP" id="96h-90-dZg"/>
                         <segue destination="tlC-OI-MPY" kind="show" identifier="createGrupoSegue" id="XqH-jH-epz"/>
                         <segue destination="Kft-JV-ec5" kind="show" identifier="editGroupSegue" id="xf8-5W-6P1"/>
                     </connections>
