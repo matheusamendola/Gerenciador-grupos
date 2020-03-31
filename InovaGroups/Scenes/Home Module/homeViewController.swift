@@ -96,8 +96,8 @@ class homeViewController: UIViewController, UITableViewDelegate, UITableViewData
                         
                     }
                     self.myTableView.reloadData()
-                    print(self.groupArray)
-                    print(self.groupIDArray)
+                    //print(self.groupArray)
+                    //print(self.groupIDArray)
                     
                 }
         }
@@ -111,10 +111,7 @@ class homeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
         docRef.getDocument { (document, error) in
             if let document = document, document.exists {
-                //let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
-                //print("Document data: \(dataDescription)")
                 let data = document.data()
-                
                 self.cargo = data!["cargo"] as! String
                 self.groupName = data!["groupName"] as! String
                 self.groupoCriado = data!["grupoCriado"] as! String
@@ -168,7 +165,7 @@ class homeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-           print("row: \(indexPath.row)")
+           //print("row: \(indexPath.row)")
         selectedGroup = groupIDArray[indexPath.row]
         performSegue(withIdentifier: "viewGroup", sender: nil)
         

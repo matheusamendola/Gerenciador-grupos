@@ -18,9 +18,14 @@ class viewGroupViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var lbLeaderPhone: UILabel!
     @IBOutlet weak var lbGroupStatus: UILabel!
     
-
+    @IBOutlet weak var viLoading: UIView!
+    @IBOutlet weak var aiLoading: UIActivityIndicatorView!
     
-    var studentArray = ["Matheus", "vazio", "vazio", "vazio", "vazio", "vazio", "vazio", "vazio", "vazio", "vazio", "vazio"]
+    
+    let USERS_REF = "users"
+    
+    var studentArrayName = [String]() //Nome
+    var studentArray = [String]() //ID
     
     var teste: String = ""
     var groupName: String = ""
@@ -29,16 +34,16 @@ class viewGroupViewController: UIViewController, UITableViewDelegate, UITableVie
     var status: String = ""
     var name: String = ""
     var phone: String = ""
+    
+    var groupMemberNames = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        myTableView.dataSource = self
-        myTableView.delegate = self
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
         showNavigationBar()
+        self.load(show: true)
         getGroupInfos()
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -46,8 +51,22 @@ class viewGroupViewController: UIViewController, UITableViewDelegate, UITableVie
         self.navigationController!.navigationBar.backItem!.title = "Voltar"
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        myTableView.reloadData()
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         hideNavigationBar()
+    }
+    
+    func load(show: Bool) {
+        viLoading.isHidden = !show
+        if show{
+            aiLoading.startAnimating()
+        }
+        else{
+            aiLoading.stopAnimating()
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -61,7 +80,7 @@ class viewGroupViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "alunos", for: indexPath)
         
-        cell.textLabel!.text = studentArray[indexPath.row]
+        cell.textLabel!.text = studentArrayName[indexPath.row]
         return cell
     }
     
@@ -75,7 +94,6 @@ class viewGroupViewController: UIViewController, UITableViewDelegate, UITableVie
                 self.groupTheme = data!["groupTheme"] as! String
                 self.ownerID = data!["owner"] as! String
                 self.status = data!["status"] as! String
-                
                 self.getOwnerInfo()
             } else {
                 print("Document does not exist")
@@ -91,12 +109,47 @@ class viewGroupViewController: UIViewController, UITableViewDelegate, UITableVie
                 let data = document.data()
                 self.name = data!["name"] as! String
                 self.phone = data!["phone"] as! String
-                self.showData()
+                self.getStudentArray()
+                
             } else {
                 print("Document does not exist")
             }
         }
     }
+    
+    func getStudentArray(){
+        //Pega ID's e coloca na Array "studentArray"
+        Firestore.firestore().collection("groups").document(teste).getDocument { (document, error) in
+            if let document = document {
+                self.studentArray = document["studentArray"] as! Array
+            }
+            self.getNames()
+        }
+        
+        
+        
+    }
+    
+    func getNames(){
+        print(self.studentArray)
+        var nameToId = ""
+        let db = Firestore.firestore()
+        for i in studentArray{
+            let docRef = db.collection("users").document(i)
+            docRef.getDocument { (document, error) in
+                if let document = document, document.exists {
+                    let data = document.data()
+                    nameToId = data!["name"] as! String
+                    self.studentArrayName.append(nameToId)
+                    self.showData()
+                } else {
+                    self.studentArrayName.append("Vazio")
+                }
+            }
+        }
+        
+    }
+    
     
     func showData(){
         lbGroupName.text = "Grupo: \(groupName)"
@@ -104,6 +157,13 @@ class viewGroupViewController: UIViewController, UITableViewDelegate, UITableVie
         lbGroupLeader.text = "Líder: \(name)"
         lbLeaderPhone.text = "Telefone: \(phone)"
         lbGroupStatus.text = "Status: \(status)"
+
+        self.studentArrayName.reverse()
+        print(self.studentArrayName)
+        
+        myTableView.dataSource = self
+        myTableView.delegate = self
+        self.load(show: false)
     }
     
     

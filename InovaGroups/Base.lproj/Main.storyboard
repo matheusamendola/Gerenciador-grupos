@@ -599,19 +599,19 @@ Suporte: matheusamendolaa@gmail.com</string>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grupo:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Elv-D6-1F1">
-                                        <rect key="frame" x="15" y="107" width="345" height="22"/>
+                                        <rect key="frame" x="15" y="106.5" width="345" height="22"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aluno" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKA-L1-u6M">
-                                        <rect key="frame" x="15" y="134" width="345" height="21.5"/>
+                                        <rect key="frame" x="15" y="133.5" width="345" height="21.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0hU-GM-pY4">
-                                        <rect key="frame" x="15" y="170.5" width="345" height="22"/>
+                                        <rect key="frame" x="15" y="170" width="345" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22" id="3L1-Xr-rbL"/>
                                         </constraints>
@@ -622,8 +622,8 @@ Suporte: matheusamendolaa@gmail.com</string>
                                             <action selector="createOrEdit:" destination="k1h-6a-a6B" eventType="touchUpInside" id="WxP-UT-oSD"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Olá," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7md-Ji-gCa">
-                                        <rect key="frame" x="15" y="68" width="345" height="34"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Olá," textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7md-Ji-gCa">
+                                        <rect key="frame" x="15" y="68" width="345" height="33.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="28"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -1412,6 +1412,21 @@ Suporte: matheusamendolaa@gmail.com</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view hidden="YES" contentMode="scaleToFill" id="9Nk-gu-EPc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="E53-6z-weW">
+                                        <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                        <color key="color" name="blueUVV"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="E53-6z-weW" firstAttribute="centerX" secondItem="9Nk-gu-EPc" secondAttribute="centerX" id="5vA-Zq-Jwd"/>
+                                    <constraint firstItem="E53-6z-weW" firstAttribute="centerY" secondItem="9Nk-gu-EPc" secondAttribute="centerY" id="Az0-iP-ByW"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -1428,12 +1443,14 @@ Suporte: matheusamendolaa@gmail.com</string>
                     <navigationItem key="navigationItem" title="Ver Grupo" id="Bm1-oB-SIu"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="aiLoading" destination="E53-6z-weW" id="cfZ-7h-Xye"/>
                         <outlet property="lbGroupLeader" destination="rLa-HX-Eu7" id="8pc-Uq-5rP"/>
                         <outlet property="lbGroupName" destination="myr-SP-NX8" id="6KI-dS-JAd"/>
                         <outlet property="lbGroupStatus" destination="vox-Dz-Fen" id="YKQ-LA-5zx"/>
                         <outlet property="lbGroupTheme" destination="1NE-Pp-gmi" id="Zue-gB-6Bf"/>
                         <outlet property="lbLeaderPhone" destination="Ns1-e2-JCG" id="gLA-6a-hcI"/>
                         <outlet property="myTableView" destination="MGC-mM-D6T" id="LXa-hi-v7l"/>
+                        <outlet property="viLoading" destination="9Nk-gu-EPc" id="GTT-TI-4s6"/>
                         <segue destination="LTa-Ev-Pb7" kind="show" identifier="seeProfile2" id="lGn-IP-Wc8"/>
                     </connections>
                 </viewController>

@@ -71,8 +71,16 @@ class registerViewController: UIViewController {
                 else{
                     let db = Firestore.firestore()
                     let owner = (Auth.auth().currentUser?.uid)!
-                    
-                    db.collection("users").document(owner).setData(["curso": curso, "name":name, "matricula":matricula,"phone":phone,"uid":result!.user.uid,"group": "nil","groupName": "Sem grupo","cargo": "Aluno","grupoCriado": "0"]){ (error) in
+                    db.collection("users").document(owner).setData([
+                        "curso": curso,
+                        "name":name,
+                        "matricula":matricula,
+                        "phone":phone,
+                        "uid":result!.user.uid,
+                        "group": "nil",
+                        "groupName": "Sem grupo",
+                        "cargo": "Aluno",
+                        "grupoCriado": "0"]){ (error) in
                         if error != nil {
                             print("Erro")
                         }

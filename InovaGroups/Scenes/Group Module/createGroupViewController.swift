@@ -36,7 +36,7 @@ class createGroupViewController: UIViewController {
         let db = Firestore.firestore()
         let owner = Auth.auth().currentUser?.uid
         
-        let studentArray = [owner, "", "", "", "", "", "", "", "", "", ""]
+        let studentArray = [owner, "", "", "", "", "", "", "", "", ""]
         let identifier = UUID().uuidString
         
         db.collection("groups").document(identifier).setData(["groupName": name,
