@@ -39,6 +39,7 @@ class homeViewController: UIViewController, UITableViewDelegate, UITableViewData
     var groupName: String = ""
     var groupoCriado: String = ""
     var name: String = ""
+    var group: String = ""
     
     
     override func viewDidLoad() {
@@ -116,7 +117,8 @@ class homeViewController: UIViewController, UITableViewDelegate, UITableViewData
                 self.groupName = data!["groupName"] as! String
                 self.groupoCriado = data!["grupoCriado"] as! String
                 self.name = data!["name"] as! String
-                
+                self.group = data!["group"] as! String
+                print(self.group)
                 self.updateData()
                 
             } else {
@@ -159,6 +161,12 @@ class homeViewController: UIViewController, UITableViewDelegate, UITableViewData
                 if let destination = segue.destination as? viewGroupViewController {
                     destination.teste = selectedGroup
                     
+                }
+            }
+            if segue.identifier == "editGroupSegue"{
+                print(self.group)
+                if let destination = segue.destination as? editGroupViewController {
+                    destination.teste = group
                 }
             }
     }

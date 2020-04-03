@@ -11,6 +11,8 @@ import Firebase
 
 class viewGroupViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    
+    
     @IBOutlet weak var myTableView: UITableView!
     @IBOutlet weak var lbGroupName: UILabel!
     @IBOutlet weak var lbGroupTheme: UILabel!
