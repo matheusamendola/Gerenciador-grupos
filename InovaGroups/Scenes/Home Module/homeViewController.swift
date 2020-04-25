@@ -48,6 +48,7 @@ class homeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
 
     override func viewWillAppear(_ animated: Bool) {
+        hideNavigationBar()
         getUserData()
         updateData()
         getGroupList()
@@ -56,6 +57,7 @@ class homeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidAppear(_ animated: Bool) {
         myTableView.reloadData()
+        print("finalizou")
     }
     
     

@@ -12,7 +12,6 @@ import Firebase
 class viewGroupViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
-    
     @IBOutlet weak var myTableView: UITableView!
     @IBOutlet weak var lbGroupName: UILabel!
     @IBOutlet weak var lbGroupTheme: UILabel!
@@ -28,6 +27,7 @@ class viewGroupViewController: UIViewController, UITableViewDelegate, UITableVie
     
     var studentArrayName = [String]() //Nome
     var studentArray = [String]() //ID
+    var selectedStudent = ""
     
     var teste: String = ""
     var groupName: String = ""
@@ -58,7 +58,7 @@ class viewGroupViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        hideNavigationBar()
+        //hideNavigationBar()
     }
     
     func load(show: Bool) {
@@ -84,6 +84,21 @@ class viewGroupViewController: UIViewController, UITableViewDelegate, UITableVie
         
         cell.textLabel!.text = studentArrayName[indexPath.row]
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("row: \(indexPath.row)")
+        selectedStudent = studentArray[indexPath.row]
+        performSegue(withIdentifier: "seeProfile2", sender: nil)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "seeProfile2" {
+                if let destination = segue.destination as? PersonViewController {
+                    destination.selectedStudent = selectedStudent
+                }
+            }
     }
     
     func getGroupInfos(){

@@ -23,6 +23,7 @@
 		E0ACB8372427CDBE00D122A3 /* addPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0ACB8362427CDBE00D122A3 /* addPersonViewController.swift */; };
 		E0ACB83B2427E2E500D122A3 /* createGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0ACB83A2427E2E500D122A3 /* createGroupViewController.swift */; };
 		E0ACB83D24280D9B00D122A3 /* sendGroupConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0ACB83C24280D9B00D122A3 /* sendGroupConfirmViewController.swift */; };
+		E0B606A22454906200213332 /* PersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B606A12454906200213332 /* PersonViewController.swift */; };
 		E0CA081424266F9200BAAEB5 /* registerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CA081324266F9200BAAEB5 /* registerViewController.swift */; };
 		E0CA081E24269DEA00BAAEB5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CA081D24269DEA00BAAEB5 /* ViewController.swift */; };
 		E0E77D66242FA12B00BADDF5 /* GroupsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E77D65242FA12B00BADDF5 /* GroupsTableViewCell.swift */; };
@@ -50,6 +51,7 @@
 		E0ACB8362427CDBE00D122A3 /* addPersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addPersonViewController.swift; sourceTree = "<group>"; };
 		E0ACB83A2427E2E500D122A3 /* createGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createGroupViewController.swift; sourceTree = "<group>"; };
 		E0ACB83C24280D9B00D122A3 /* sendGroupConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sendGroupConfirmViewController.swift; sourceTree = "<group>"; };
+		E0B606A12454906200213332 /* PersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewController.swift; sourceTree = "<group>"; };
 		E0CA081324266F9200BAAEB5 /* registerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerViewController.swift; sourceTree = "<group>"; };
 		E0CA081D24269DEA00BAAEB5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E0E77D65242FA12B00BADDF5 /* GroupsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsTableViewCell.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				E0ACB8362427CDBE00D122A3 /* addPersonViewController.swift */,
 				E0ACB83C24280D9B00D122A3 /* sendGroupConfirmViewController.swift */,
 				E03EA62524311CBD005D8699 /* viewGroupViewController.swift */,
+				E0B606A12454906200213332 /* PersonViewController.swift */,
 			);
 			path = "Group Module";
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				E07589212426E43A0043DA04 /* configurationViewController.swift in Sources */,
 				E0E77D66242FA12B00BADDF5 /* GroupsTableViewCell.swift in Sources */,
 				E05EEB85242C29D6002C8BA1 /* sendExitViewController.swift in Sources */,
+				E0B606A22454906200213332 /* PersonViewController.swift in Sources */,
 				E06F59F4242427BD00D9F780 /* SceneDelegate.swift in Sources */,
 				E0ACB8372427CDBE00D122A3 /* addPersonViewController.swift in Sources */,
 				E0ACB83B2427E2E500D122A3 /* createGroupViewController.swift in Sources */,
